@@ -201,6 +201,7 @@ export default {
   },
   async fetch({ store }) {
     const data = await getdata();
+    // console.log(data)
     store.commit("global/updateBlogList", data.data);
     store.commit("global/updateCount", data.count);
   },

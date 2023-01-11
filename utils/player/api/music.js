@@ -1,11 +1,12 @@
 import axios from 'axios'
+import md5 from 'js-md5';
 //获取歌词
 export const getWords=(id)=>{
     return axios.get(`api/lyric?id=${id}`);
 }
 //登录
 export const loginMusic=()=>{
-    return axios.get(`api/login/cellphone?phone=13036127695&password=liao1996z`);
+    return axios.get(`api/login/cellphone?phone=13036127695&password=''&md5_password=${md5('liao1996Z..')}`);
 }
 //获取歌曲详情
 export const getMusicInfo=(id)=>{
